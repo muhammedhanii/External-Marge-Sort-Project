@@ -191,6 +191,7 @@ public class ExternalMergeSortService {
     }
 
     private void prepareDirectories() throws IOException {
+        // docs directory is part of required project layout and stores screenshots/reports.
         DirectoryManager.ensureDirectories(List.of(dataDirectory, sortedDirectory, outputDirectory, rootDirectory.resolve("docs")));
     }
 

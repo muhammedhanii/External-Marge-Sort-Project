@@ -43,7 +43,7 @@ public final class DirectoryManager {
                         try {
                             Files.delete(path);
                         } catch (IOException ex) {
-                            throw new RuntimeException("Failed to delete file: " + path, ex);
+                            throw new RuntimeException("Failed to delete file: " + path.getFileName(), ex);
                         }
                     });
         } catch (RuntimeException ex) {

@@ -188,7 +188,8 @@ public class ExternalMergeSortApp extends Application {
             showErrorDialog(operationName + " failed", message);
         });
 
-        Thread worker = new Thread(task, "external-merge-sort-worker");
+        String workerName = "external-merge-sort-worker-" + operationName.toLowerCase().replace(' ', '-');
+        Thread worker = new Thread(task, workerName);
         worker.setDaemon(true);
         worker.start();
     }
